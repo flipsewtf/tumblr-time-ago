@@ -16,10 +16,11 @@ options for easy usage.
 Before `</body>` place the script in a `<script>` tag. Use Tumblr's theme assets to upload it.
 
 ```html
-<script src="timeago.min.js"></script>
+<script src="timeago.js"></script>
 ```
 
-You could also paste the script with your other scripts if you have any, but it takes up quite a few lines of code. If you do, just make sure the initialization follows after.
+You could also paste the script with your other scripts if you have any, but it takes up quite a few
+lines of code. If you do, just make sure the initialization follows after.
 
 ### Initialization
 
@@ -67,8 +68,8 @@ weeks up until a year.
 ### HTML
 
 This plugin requires a UNIX timestamp. For Tumblr that is `{Timestamp}`. Use a `<time>` element with
-a `data-timestamp` attribute — the `datetime` attribute holds a human-readable date for
-accessibility and SEO.
+a `data-timestamp` attribute — the `datetime` attribute holds a ISO 8601 format:YYYY-MM-DDTHH:MM:SS,
+a human-readable date for accessibility and SEO.
 
 ```html
 <time
@@ -91,7 +92,7 @@ Your HTML document should look something like this:
             datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}"
             data-timestamp="{Timestamp}"></time>
 
-        <script src="timeago.min.js"></script>
+        <script src="timeago.js"></script>
         <script>
             timeAgo(document.querySelectorAll('[data-timestamp]'), {
                 time: 'letter',
