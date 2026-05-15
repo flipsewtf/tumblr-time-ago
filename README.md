@@ -74,7 +74,7 @@ a human-readable date for accessibility and SEO.
 ```html
 <time
     class="class-name-optional"
-    datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}"
+    datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}T{24HourWithZero}:{Minutes}:{Seconds}"
     data-timestamp="{Timestamp}"></time>
 ```
 
@@ -89,7 +89,7 @@ Your HTML document should look something like this:
     <body>
         <time
             class="class-name-optional"
-            datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}"
+            datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}T{24HourWithZero}:{Minutes}:{Seconds}"
             data-timestamp="{Timestamp}"></time>
 
         <script src="timeago.js"></script>
